@@ -12,6 +12,9 @@ package 'ntp'
 
 template '/etc/motd' do
    source 'motd.erb'
+   variables(
+	:name => 'Teekay'
+   )
    action :create
    owner 'root'
    group 'root'
